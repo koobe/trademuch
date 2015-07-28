@@ -1,4 +1,6 @@
 .*
+*-secrets.groovy
+*-secrets.properties
 data/
 target/
 *.war
