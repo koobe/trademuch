@@ -30,7 +30,8 @@ class UrlMappings {
             action = 'share'
         }
 		
-		"/$channel?" (controller: 'home', action: 'index')
+		//"/$channel?" (controller: 'home', action: 'index')
+
 		"/maphome/$channel?" (controller: 'home', action: 'mapHome')
 		
 		"/content/create/$channel?" (controller: 'content', action: 'create')

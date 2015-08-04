@@ -13,6 +13,8 @@ class BootStrap {
 
     def customMailService
 
+    def elasticSearchAdminService
+
     def init = { servletContext ->
 
         // Create default s3 bucket
@@ -41,9 +43,12 @@ class BootStrap {
 
                 // Cleanup Elasticsearch caches
 
-                //log.info 'Remove Elasticsearch indexes'
+                log.info 'Remove Elasticsearch indexes'
 
-                //elasticSearchAdminService.deleteIndex()
+                elasticSearchAdminService.deleteIndex()
+
+                elasticSearchAdminService.refresh()
+
 
                 log.info 'Remove Elasticsearch cache directories'
 

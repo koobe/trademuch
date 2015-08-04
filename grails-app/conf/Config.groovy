@@ -219,9 +219,9 @@ elasticSearch {
             [host: 'localhost', port: 9300]
     ]
     defaultExcludedProperties = ["password"]
-    disableAutoIndex = false
-    bulkIndexOnStartup = true
-    maxBulkRequest = 500
+    disableAutoIndex = true
+    bulkIndexOnStartup = false
+    maxBulkRequest = 10
     searchableProperty.name = 'searchable'
 }
 
