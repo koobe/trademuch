@@ -79,7 +79,7 @@
 	</head>
 	<body>
 		<div class="container" ng-app="MapWelcomeApp" ng-controller="MapWelcomeMainController">
-			<g:render template="/home/section_title" model="[sectionTitle: '我的位置', fontAwesome: '']"></g:render>
+			<g:render template="/home/section_title" model="[sectionTitle: 'My Location', fontAwesome: '']"></g:render>
 			
 			<div>
 				<div class="title">
@@ -143,11 +143,11 @@
      		<div style="display: table; padding-top: 40px; width:100%;">
      			<div style="display:table-cell; vertical-align:middle;">
      				<div style="float:right; padding-right:10px;">
-     					<a id="button-ignore" href="javascript:void(0);" ng-click="skipSetLocation()">下次再提醒我</a>
+     					<a id="button-ignore" href="javascript:void(0);" ng-click="skipSetLocation()">Skip this action</a>
      				</div>
      			</div>
 				<div style="display:table-cell;">
-					<a href="javascript:void(0);" ng-click="saveMyLocation()" id="button-confirm" style="width:100%;" class="koobe-text-btn koobe-text-btn-default">確定</a>
+					<a href="javascript:void(0);" ng-click="saveMyLocation()" id="button-confirm" style="width:100%;" class="koobe-text-btn koobe-text-btn-default">Done</a>
 		        </div>
      		</div>
      		

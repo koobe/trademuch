@@ -27,9 +27,13 @@ class VirtualHostFilters {
 						currentChannel = Channel.findByIsDefault(true)
 					}
 
+					if (!currentChannel) {
+                        currentChannel = new Channel(name: 'trade')
+                    }
+
 					session.vhostMapping = [
 							hostName: request.serverName,
-							channelName: currentChannel?.name?:'e7read',
+							channelName: currentChannel.name,
 							webpageTitle: webtitle?:'E7READ'  //default title
 					]
 
@@ -37,7 +41,7 @@ class VirtualHostFilters {
 //	                request.setAttribute('channel', currentChannel)
 //					session.channelName = currentChannel.name
 	
-					log.info "(VirtualHost) auto mapping to channel[${currentChannel?.name?:'e7read'}]"
+					log.info "(VirtualHost) auto mapping to channel[${currentChannel.name}]"
 				}
 
 //				if (request.getParameter('SSO_FB_TOKEN')) {

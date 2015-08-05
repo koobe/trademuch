@@ -78,7 +78,7 @@
 		</div>
 		
 		<div class="header-inline-element" >
-			<g:link url="/${channel.name}" style="text-decoration: none !important;" target="_top">
+			<g:link url="/" style="text-decoration: none !important;" target="_top">
 				<g:img uri="${channel.logoImg}" class="header-image"/>
 			</g:link>
 		</div>
