@@ -1,8 +1,5 @@
 package kgl
 
-import org.codenarc.rule.braces.ElseBlockBracesAstVisitor;
-import org.hibernate.annotations.NotFound;
-
 import grails.plugin.springsecurity.annotation.Secured
 
 @Secured(["permitAll"])
@@ -11,6 +8,14 @@ class HomeController {
 	def grailsApplication
 	
 	def springSecurityService
+
+	def landing() {
+
+
+
+		[]
+	}
+
 
     def index(String channel) {
 		
