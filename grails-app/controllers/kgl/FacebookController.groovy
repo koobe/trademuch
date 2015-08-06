@@ -14,18 +14,7 @@ class FacebookController {
     /**
      * allow admin permissions for these email accounts
      */
-    private final static ADMIN_EMAILS = [
-            'lyhcode@gmail.com',
-            'maxcloude@hotmail.com'
-    ]
-
-    def index() {}
-
-    /**
-     * Example: Facebook Login for the Web with the JavaScript SDK
-     * https://developers.facebook.com/docs/facebook-login/login-flow-for-web/v2.0
-     */
-    def example1() {}
+    private final static ADMIN_EMAILS = ['lyhcode@gmail.com']
 
     def success() {
 
@@ -104,35 +93,37 @@ class FacebookController {
 
         log.info loginLog.errors
 		
-		// if redirect to...
-        if (session['sso_redirect']) {
-            def uri = session['sso_redirect']
+//		// if redirect to...
+//        if (session['sso_redirect']) {
+//            def uri = session['sso_redirect']
+//
+//            session['sso_redirect'] = null
+//
+//            //log.info "${session['redirect2']}"
+//
+//            if ("${uri}".indexOf('[SSO_FB_TOKEN]') >= 0) {
+//                uri = "${uri}".replace('[SSO_FB_TOKEN]', session['facebook:oasAccessToken']?.token)
+//            }
+//
+//            log.info "sso redirect to ${uri}"
+//
+//            redirect uri: uri
+//        }
+//		else if (session['redirect_logged']) {
+//
+//            def uri = session['redirect_logged']
+//
+//            log.info "redirect to ${uri}"
+//
+//			session['redirect_logged'] = null
+//
+//            redirect uri: uri
+//		}
+//        else {
+//          redirect uri: "/"
+//		}
 
-            session['sso_redirect'] = null
 
-            //log.info "${session['redirect2']}"
-
-            if ("${uri}".indexOf('[SSO_FB_TOKEN]') >= 0) {
-                uri = "${uri}".replace('[SSO_FB_TOKEN]', session['facebook:oasAccessToken']?.token)
-            }
-
-            log.info "sso redirect to ${uri}"
-
-            redirect uri: uri
-        }
-		else if (session['redirect_logged']) {
-
-            def uri = session['redirect_logged']
-
-            log.info "redirect to ${uri}"
-
-			session['redirect_logged'] = null
-
-            redirect uri: uri
-		}
-        else {
-			redirect uri: "/"
-		}
-        
+        redirect uri: "/"
     }
 }

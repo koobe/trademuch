@@ -37,11 +37,6 @@ class LogoutController {
 
 		SecurityContextHolder.getContext().setAuthentication(null)
 		
-		// if redirect to...
-		if (params.channel) {
-			redirect uri: "/${params.channel}"
-		} else {
-			redirect uri: "/"
-		}
+		redirect uri: "/"
 	}
 }

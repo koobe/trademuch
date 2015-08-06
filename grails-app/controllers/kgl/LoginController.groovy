@@ -5,8 +5,6 @@ import grails.plugin.springsecurity.SpringSecurityUtils
 
 class LoginController {
 
-    //final String ___MAIN_FACEBOOK_AUTH_DOMAIN_SERVER___ = 'http://dev.e7read.com:8080'
-
     /**
      * Dependency injection for the authenticationTrustResolver.
      */
@@ -16,8 +14,6 @@ class LoginController {
      * Dependency injection for the springSecurityService.
      */
     def springSecurityService
-
-    def index() {}
 
     // Custom Auth Page
     def auth() {
@@ -37,8 +33,7 @@ class LoginController {
                 postUrl: postUrl,
                 rememberMeParameter: config.rememberMe.parameter,
                 isAdmin: params.getBoolean('isAdmin'),
-                redirect: session['sso_redirect'],
-                ssoUrl: "${grailsApplication.config.login.sso}?redirect=${session['sso_redirect']}&token=${session['sso_token']}&_t=${new Date().time}"
+                redirect: session['sso_redirect']
         ]
     }
 
@@ -54,10 +49,6 @@ class LoginController {
         ]
 
         render result as JSON
-    }
-
-    def oauth() {
-
     }
 
     def sso() {

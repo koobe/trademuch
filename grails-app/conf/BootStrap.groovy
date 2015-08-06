@@ -19,7 +19,7 @@ class BootStrap {
 
         // Create default s3 bucket
 
-        log.info 'Create default S3 bucket if not exists'
+        log.info "Create default S3 bucket[${s3Service.bucket}] if not exists"
 
         if (!s3Service.doesBucketExist()) {
             s3Service.createBucket()

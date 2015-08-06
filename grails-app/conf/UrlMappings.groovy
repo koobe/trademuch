@@ -8,7 +8,7 @@ class UrlMappings {
         }
 
         // "/"(view:"/index")
-        "/" (controller: "home")
+        "/" (controller: "home", action: "landing")
 
         "/c/$c/$p?" {
             controller = 'home'
@@ -38,7 +38,9 @@ class UrlMappings {
 		"/content/personal/$channel?" (controller: 'content', action: 'personal')
 //		"/content/shorten/$channel?" (controller: 'content', action: 'shorten')
 
-        "/explore/$channel?" (controller: 'map', action: 'explore')
+        //"/explore/$channel?" (controller: 'map', action: 'explore')
+
+        "/explore" (controller: 'home', action: 'mapHome')
 
         "/mapStyleFromSnazzy/$id/$name?" (controller: 'mapStyle', action: 'snazzy')
 
