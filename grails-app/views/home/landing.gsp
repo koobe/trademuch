@@ -38,7 +38,7 @@
     body.classic #team {
         background-attachment: scroll;
     }
-    
+
     footer {
         background-image: url(/bonnie/bottom.jpg);
         background-size: cover;
