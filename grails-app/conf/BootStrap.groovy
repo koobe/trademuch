@@ -43,6 +43,8 @@ class BootStrap {
 
                 // Cleanup Elasticsearch caches
 
+                /*
+
                 log.info 'Remove Elasticsearch indexes'
 
                 elasticSearchAdminService.deleteIndex()
@@ -63,6 +65,7 @@ class BootStrap {
 
                     log.info "Delete result: ${result}"
                 }
+                */
             }
         }
 

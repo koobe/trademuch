@@ -90,6 +90,21 @@
     .icons-container .marker-icon {
         width: 56px;
         position: absolute;
+
+        filter: alpha(opacity=50);
+        opacity: 0.5;
+
+        -webkit-transition: opacity .6s ease-in-out;
+        -moz-transition: opacity .6s ease-in-out;
+        -ms-transition: opacity .6s ease-in-out;
+        -o-transition: opacity .6s ease-in-out;
+        transition: opacity .6s ease-in-out;
+    }
+
+    .icons-container .marker-icon:hover {
+        filter: alpha(opacity=100);
+        opacity: 1;
+
     }
 
     .marker-icon.icon-1 {
@@ -215,16 +230,34 @@
 <div class="welcome_classic" id="welcome">
 
     <div class="icons-container">
-        <img src="bonnie/icons/icon-home.png" class="marker-icon icon-1" alt="" />
-        <img src="bonnie/icons/icon-others.png" class="marker-icon icon-2" alt="" />
-        <img src="bonnie/icons/icon-books.png" class="marker-icon icon-3" alt="" />
-        <img src="bonnie/icons/icon-collection.png" class="marker-icon icon-4" alt="" />
-        <img src="bonnie/icons/icon-digital.png" class="marker-icon icon-5" alt="" />
+        <a href="/explore">
+            <img src="bonnie/icons/icon-home.png" class="marker-icon icon-1" alt="" />
+        </a>
+        <a href="/c/others">
+            <img src="bonnie/icons/icon-others.png" class="marker-icon icon-2" alt="" />
+        </a>
+        <a href="/c/books">
+            <img src="bonnie/icons/icon-books.png" class="marker-icon icon-3" alt="" />
+        </a>
+        <a href="/c/collection">
+            <img src="bonnie/icons/icon-collection.png" class="marker-icon icon-4" alt="" />
+        </a>
+        <a href="/c/digital">
+            <img src="bonnie/icons/icon-digital.png" class="marker-icon icon-5" alt="" />
+        </a>
 
-        <img src="bonnie/icons/icon-clothes.png" class="marker-icon icon-6" alt="" />
-        <img src="bonnie/icons/icon-food.png" class="marker-icon icon-7" alt="" />
-        <img src="bonnie/icons/icon-cosmetic.png" class="marker-icon icon-8" alt="" />
-        <img src="bonnie/icons/icon-sport.png" class="marker-icon icon-9" alt="" />
+        <a href="/c/clothes">
+            <img src="bonnie/icons/icon-clothes.png" class="marker-icon icon-6" alt="" />
+        </a>
+        <a href="/c/food">
+            <img src="bonnie/icons/icon-food.png" class="marker-icon icon-7" alt="" />
+        </a>
+        <a href="/c/cosmetic">
+            <img src="bonnie/icons/icon-cosmetic.png" class="marker-icon icon-8" alt="" />
+        </a>
+        <a href="/c/sport">
+            <img src="bonnie/icons/icon-sport.png" class="marker-icon icon-9" alt="" />
+        </a>
     </div>
 
     <div class="welcome-classic__inner">

@@ -12,6 +12,10 @@ class HomeController {
 	def landing() {
 
 
+		if (springSecurityService.isLoggedIn()) {
+			redirect uri: '/explore'
+			return
+		}
 
 		[]
 	}

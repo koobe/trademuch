@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <style>
+            div { white-space: pre; }
+        </style>
+    </head>
+    <body>
+        <h1>Linkify demonstration</h1>
+        <h2>Desired result</h2>
+        <div id="desired">
+            <a href="http://google.com#foobar">http://google.com#foobar</a>
+            <a href="http://google.com#foobar">http://google.com#foobar</a>.
+            <strong><a href="http://google.com#foobar">http://google.com#foobar</a></strong>
+            <a href="http://google.com">Google</a>.
+            <a href="http://google.com">http://google.com</a>.
+            (<a href="http://google.com#foobar">http://google.com#foobar</a>)
+            &lt;<a href="http://google.com">http://google.com</a>&gt;
+            <a href="http://en.wikipedia.org/wiki/Google_(disambiguation)">http://en.wikipedia.org/wiki/Google_(disambiguation)</a>
+            <button>http://google.com#foobar</button>
+            <a href="http://www.google.com">www.google.com</a>
+            <a href="mailto:text1@example.com">text1@example.com</a>
+            <a href="mailto:text2@example.com">text2@example.com</a>.
+            &lt;<a href="mailto:text3@example.com">text3@example.com</a>&gt;
+            &lt;<a href="mailto:text4@example.com">text4@example.com</a>&gt;.
+            <a href="http://google.com">google.com</a>
+            <a href="http://google.com">google.com</a>.javapackagedescriptor
+            google-com
+        </div>
+        <h2>Attempt</h2>
+        <div id="attempt">
+            http://google.com#foobar
+            http://google.com#foobar.
+            <strong>http://google.com#foobar</strong>
+            <a href="http://google.com">Google</a>.
+            <a href="http://google.com">http://google.com</a>.
+            (http://google.com#foobar)
+            &lt;http://google.com&gt;
+            http://en.wikipedia.org/wiki/Google_(disambiguation)
+            <button>http://google.com#foobar</button>
+            www.google.com
+            text1@example.com
+            text2@example.com.
+            &lt;text3@example.com&gt;
+            &lt;text4@example.com&gt;.
+            google.com
+            google.com.javapackagedescriptor
+            google-com
+        </div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="jquery.linkify.js"></script>
+    <script>
+        try {
+            for (var pass=1; pass<5; pass++) {
+                $("#attempt").linkify();
+                var attempt_html = $("#attempt").html();
+                var desired_html = $("#desired").html();
+                if (attempt_html != desired_html) {
+                    for (var i=0, len = attempt_html.length; i < len; i++) {
+                        if (attempt_html[i] !== desired_html[i]) {
+                            console.log("Difference at character "+i+": "+attempt_html.substr(Math.max(0, i - 30), 60));
+                            break;
+                        }
+                    }
+                    throw "Failed on pass #" + pass;
+                }
+            }
+            $("body").css("background", "#cfc");
+        } catch (err) {
+            console.log(err);
+            $("body").css("background", "#fcc");
+        }
+    </script>
+</html>

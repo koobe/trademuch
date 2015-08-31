@@ -222,15 +222,18 @@ elasticSearch {
             [host: 'localhost', port: 9300]
     ]
     defaultExcludedProperties = ["password"]
-    disableAutoIndex = true
-    bulkIndexOnStartup = false
+    disableAutoIndex = false
+    bulkIndexOnStartup = true
     maxBulkRequest = 10
     searchableProperty.name = 'searchable'
 }
 
 environments {
     development {
-        elasticSearch.client.mode = 'local'
+        elasticSearch {
+            client.mode = 'local'
+            index.store.type = 'memory'
+        }
     }
     test {
         elasticSearch {
