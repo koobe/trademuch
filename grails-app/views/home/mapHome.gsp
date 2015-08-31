@@ -7,9 +7,9 @@
 	    
 	    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.js"></script>
 	    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular-resource.min.js"></script>
-	    
-	    <script src="//soapbox.github.io/jQuery-linkify/dist/jquery.linkify.min.js"></script>
-	    
+
+		<script src="/vendor/linkify/jquery.linkify.js"></script>
+
 	    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
   		<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 		
@@ -205,13 +205,13 @@
 								<div style="display:inline-block;">
 
 									<div class="btn-group apply-theme-style" data-toggle="buttons">
-										<label class="btn btn-primary btn-sm active" ng-click="refreshAll($event)">
-											<input name="tradeType" value="buy" type="checkbox" autocomplete="off" checked />
+										<label class="btn btn-primary btn-sm <%= params.tradeType=='buy'||!params.tradeType?'active':'' %>" ng-click="refreshAll($event)">
+											<input name="tradeType" value="buy" type="checkbox" autocomplete="off" <%= params.tradeType=='buy'||!params.tradeType?'checked':'' %> />
 											<i class="fa fa-shopping-cart"></i>
 											Buy
 										</label>
-										<label class="btn btn-primary btn-sm active" ng-click="refreshAll($event)">
-											<input name="tradeType" value="sell" type="checkbox" autocomplete="off" checked />
+										<label class="btn btn-primary btn-sm <%= params.tradeType=='sell'||!params.tradeType?'active':'' %>" ng-click="refreshAll($event)">
+											<input name="tradeType" value="sell" type="checkbox" autocomplete="off" <%= params.tradeType=='sell'||!params.tradeType?'checked':'' %> />
 											<i class="fa fa-tag"></i>
 											Sell
 										</label>

@@ -19,12 +19,15 @@ $(function() {
 	
 	$('.extended-filter-panel-click').click(function() {
 		if (isFilterPanelOpend) {
-			$('.extended-filter-panel').hide(250);
 			isFilterPanelOpend = false;
+
+			$('.extended-filter-panel').hide();
 			$('#icon-filter-toggle').removeClass('fa-caret-up').addClass('fa-tasks');
-		} else {
-			$('.extended-filter-panel').show(250);
+		}
+		else {
 			isFilterPanelOpend = true;
+
+			$('.extended-filter-panel').show();
 			$('#icon-filter-toggle').removeClass('fa-tasks').addClass('fa-caret-up');
 		}
 	});

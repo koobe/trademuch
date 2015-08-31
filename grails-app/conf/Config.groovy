@@ -243,7 +243,10 @@ environments {
     }
     production {
         //elasticSearch.client.mode = 'node'
-        elasticSearch.client.mode = 'local'
+        elasticSearch {
+            client.mode = 'local'
+            index.store.type = 'memory'
+        }
     }
 }
 

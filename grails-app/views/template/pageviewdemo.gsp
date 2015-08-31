@@ -9,9 +9,9 @@
 		<script src="//code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
 		
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-		
-		<script src="//soapbox.github.io/jQuery-linkify/dist/jquery.linkify.min.js"></script>
-		
+
+		<script src="/vendor/linkify/jquery.linkify.js"></script>
+
 		<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"/>
 		
 		<asset:stylesheet src="imageview.css"/>

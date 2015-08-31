@@ -3,8 +3,6 @@
 	    <meta name="layout" content="main"/>
 	    <title></title>
 	    
-	    <script src="//soapbox.github.io/jQuery-linkify/dist/jquery.linkify.min.js"></script>
-	    
 	    <asset:javascript src="jquery.messagemanager.js"/>
 	    <asset:javascript src="jquery.loadingspinner.js"/>
 		<asset:stylesheet src="loadingspinner.css"/>
@@ -29,6 +27,8 @@
 		
 		<asset:stylesheet src="default_template.css"/>
 		<asset:stylesheet src="content/content_view.css"/>
+
+		<script src="/vendor/linkify/jquery.linkify.js"></script>
 	</head>
 	<body>
 		<fb:init/>

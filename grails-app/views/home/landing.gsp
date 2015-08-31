@@ -330,11 +330,17 @@
 
         <div class="text-center">
 
-            <img src="/bonnie/wanttobuy.png" style="width:150px" alt="story" />
+            <a href="/explore?tradeType=buy">
+                <img src="/bonnie/wanttobuy.png" style="width:150px" alt="story" />
+            </a>
 
-            <img src="/bonnie/wanttosell.png" style="width:150px" alt="story" />
+            <a href="/explore?tradeType=sell">
+                <img src="/bonnie/wanttosell.png" style="width:150px" alt="story" />
+            </a>
 
-            <img src="/bonnie/seeall.png" style="width:150px" alt="story" />
+            <a href="/explore">
+                <img src="/bonnie/seeall.png" style="width:150px" alt="story" />
+            </a>
 
         </div>
 
@@ -456,7 +462,7 @@
 <script src="/wolfram/js/plugins/isotope.pkgd.min.js"></script>
 <script src="/wolfram/js/plugins/lightbox.min.js"></script>
 <script src="/wolfram/js/plugins/contact.js"></script>
-<script src="/wolfram/js/plugins/google-maps.js"></script>
+<!--<script src="/wolfram/js/plugins/google-maps.js"></script>-->
 
 <!-- JS Custom -->
 <script src="/wolfram/js/custom_classic.js"></script>
@@ -470,6 +476,26 @@ $(function() {
     });
 
 });
+
+function initialize() {
+    var myLatlng = new google.maps.LatLng(25.0339031, 121.5645099); // Change your location
+    var mapOptions = {
+        zoom: 13, // Change zoom value
+        scrollwheel: false, // Change to "true" to enable users scale map on scroll
+        center: myLatlng
+    }
+    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+    /*
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title: 'You are here' // Change the pinpoint popup text
+    });
+    */
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 
 </body>

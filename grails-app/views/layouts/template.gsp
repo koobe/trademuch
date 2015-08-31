@@ -34,9 +34,9 @@
 
 	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet"/>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
-	
-	<script src="//soapbox.github.io/jQuery-linkify/dist/jquery.linkify.min.js"></script>
-    
+
+    <script src="/vendor/linkify/jquery.linkify.js"></script>
+
     <asset:stylesheet src="imageview.css"/>
 	<asset:javascript src="jquery.imageview.js"/>
 
