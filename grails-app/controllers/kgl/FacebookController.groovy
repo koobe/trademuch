@@ -124,6 +124,6 @@ class FacebookController {
 //		}
 
 
-        redirect uri: "/"
+        redirect uri: "/explore"
     }
 }

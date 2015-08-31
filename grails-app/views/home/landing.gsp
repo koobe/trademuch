@@ -79,7 +79,64 @@
         background-image: url(/wolfram/img/bg-pattern.png), url(/bonnie/about.jpg);
         background-size: auto, cover;
     }
-    </style>
+
+    /*
+    .icons-container {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+    }
+    */
+    .icons-container .marker-icon {
+        width: 56px;
+        position: absolute;
+    }
+
+    .marker-icon.icon-1 {
+        top: 25%;
+        left: 3.66%;
+    }
+
+    .marker-icon.icon-2 {
+        top: 31%;
+        left: 31.33%;
+    }
+
+    .marker-icon.icon-3 {
+        top: 10%;
+        left: 62%;
+    }
+
+    .marker-icon.icon-4 {
+        top: 25%;
+        left: 75.66%;
+    }
+
+    .marker-icon.icon-5 {
+        top: 20%;
+        left: 88.33%;
+    }
+
+    .marker-icon.icon-6 {
+        top: 70%;
+        left: 4.33%;
+    }
+
+    .marker-icon.icon-7 {
+        top: 72%;
+        left: 16.66%;
+    }
+
+    .marker-icon.icon-8 {
+        top: 66%;
+        left: 44%;
+    }
+
+    .marker-icon.icon-9 {
+        top: 72%;
+        left: 74%;
+    }
+</style>
 </head>
 
 <body class="classic" data-spy="scroll" data-target=".scrollspy_menu">
@@ -156,6 +213,20 @@
 <!-- WELCOME
     ============================== -->
 <div class="welcome_classic" id="welcome">
+
+    <div class="icons-container">
+        <img src="bonnie/icons/icon-home.png" class="marker-icon icon-1" alt="" />
+        <img src="bonnie/icons/icon-others.png" class="marker-icon icon-2" alt="" />
+        <img src="bonnie/icons/icon-books.png" class="marker-icon icon-3" alt="" />
+        <img src="bonnie/icons/icon-collection.png" class="marker-icon icon-4" alt="" />
+        <img src="bonnie/icons/icon-digital.png" class="marker-icon icon-5" alt="" />
+
+        <img src="bonnie/icons/icon-clothes.png" class="marker-icon icon-6" alt="" />
+        <img src="bonnie/icons/icon-food.png" class="marker-icon icon-7" alt="" />
+        <img src="bonnie/icons/icon-cosmetic.png" class="marker-icon icon-8" alt="" />
+        <img src="bonnie/icons/icon-sport.png" class="marker-icon icon-9" alt="" />
+    </div>
+
     <div class="welcome-classic__inner">
         <div class="container">
             <div class="row">
@@ -358,6 +429,15 @@
 <script src="/wolfram/js/custom_classic.js"></script>
 <script src="/wolfram/js/custom.js"></script>
 
+<script>
+$(function() {
+
+    $('.marker-icon').each(function() {
+
+    });
+
+});
+</script>
 
 </body>
 </html>
