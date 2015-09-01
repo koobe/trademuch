@@ -112,8 +112,8 @@
 					
 					var markerIcon = {
 						url: options.icon,
-						size: new google.maps.Size(38, 38),
-						scaledSize: new google.maps.Size(38, 38)
+						size: new google.maps.Size(64, 64),
+						scaledSize: new google.maps.Size(64, 64)
 					};
 					
 					angular.extend(options, {

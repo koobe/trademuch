@@ -143,8 +143,11 @@
 	    	<div style="display:inline-block;" class="btn-item">
 	            <g:link id="button-post-cancel" class="koobe-text-btn koobe-text-btn-inverse" style="width:90px;" uri="javascript:cancelPost();" ><g:message code="default.button.cancel.label" /></g:link>
 	        </div>
+            <div style="display:inline-block;" class="btn-item">
+                <g:link controller="content" action="pullOff" id="${contentInstance.id}" class="koobe-text-btn koobe-text-btn-inverse" style="width: 90px"><g:message code="default.button.pullOff.label" /></g:link>
+            </div>
 	        <div style="display:inline-block;" class="btn-item">
-	            <g:link id="button-post" class="koobe-text-btn koobe-text-btn-default" style="width:90px;" uri="javascript: postContent(true);">儲存</g:link>
+	            <g:link id="button-post" class="koobe-text-btn koobe-text-btn-default" style="width:90px;" uri="javascript: postContent(true);"><g:message code="default.button.save.label" />></g:link>
 	        </div>
         </div>
     </div>

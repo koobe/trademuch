@@ -59,8 +59,8 @@
 	</nav>
 	
 	<div>
-		<div class="title">Welcome to E7LIFE.</div>
-		<div class="sub-title">-Share everything around your nearby locations</div>
+		<div class="title">Welcome to Trade Much.</div>
+		<div class="sub-title">--- Share everything around your nearby locations</div>
 	</div>
      
      <div class="login-block">

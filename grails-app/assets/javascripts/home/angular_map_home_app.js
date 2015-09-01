@@ -152,15 +152,31 @@ mapHomeApp.controller('ContentFlowController',
 				$scope.contentIdList.push(content.id);
 				
 				var iconUrl;
-				
+				var iconNeedPostProcess = false;
+
 				if (content.iconUrl) {
 					iconUrl = content.iconUrl;
 				} else if (content.categories && content.categories[0]) {
 					iconUrl = content.categories[0].iconUrl;
+					iconNeedPostProcess = true;
 				} else {
 					iconUrl = content.channel.iconUrl;
 				}
-						
+
+
+				if (iconNeedPostProcess) {
+					if (content.jsonAttrs && content.jsonAttrs.tradeType && content.jsonAttrs.tradeType=='buy') {
+
+					}
+					else if (content.jsonAttrs && content.jsonAttrs.tradeType && content.jsonAttrs.tradeType=='sell') {
+						iconUrl = iconUrl.replace('.png', '_sell.png')
+					}
+					else if (content.jsonAttrs && content.jsonAttrs.tradeType && content.jsonAttrs.tradeType=='off') {
+						iconUrl = iconUrl.replace('.png', '_nostock.png')
+					}
+				}
+
+
 				$googleMapService.addMarker(content.location.lat, content.location.lon, {
 					contentId: content.id,
 					title: content.cropTitle,

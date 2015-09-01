@@ -414,20 +414,26 @@
                 &nbsp;
             </div>
             <div class="col-xs-4 col-sm-3">
+                <!--
                 <h4>Company</h4>
                 <ul>
                     <li>About</li>
                     <li>Term &amp; Privacy</li>
                 </ul>
+                -->
             </div>
             <div class="col-xs-4 col-sm-3">
+                <!--
                 <h4>How to use?</h4>
                 <ul>
                     <li>Help</li>
                     <li>Site map</li>
                 </ul>
+                -->
             </div>
             <div class="col-xs col-sm-3">
+                Trade Much &copy; 2015
+                <!--
                 <div class="social__items">
                     Follow us on
                     <a href="#" class="social__item">
@@ -439,7 +445,9 @@
                     <a href="#" class="social__item">
                         <i class="fa fa-google-plus"></i>
                     </a>
-                </div> <!-- / .social__links -->
+                </div>
+                -->
+                <!-- / .social__links -->
             </div>
         </div>
     </div>

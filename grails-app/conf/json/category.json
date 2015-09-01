@@ -78,7 +78,7 @@
 			"enable": true,
 			"order": 3,
 			"channel": "trade",
-			"iconUrl": "/assets/map/category/cosmtic.png"
+			"iconUrl": "/assets/map/category/cosmetic.png"
 		},
 		{
 			"name" : "food",

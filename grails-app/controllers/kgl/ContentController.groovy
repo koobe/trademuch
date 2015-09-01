@@ -1325,5 +1325,9 @@ class ContentController {
 		}
 	}
 	
-	
+	def pullOff(Content content) {
+		content.setJsonAttr('tradeType', 'off')
+		content.save(flush: true)
+		redirect uri: '/'
+	}
 }

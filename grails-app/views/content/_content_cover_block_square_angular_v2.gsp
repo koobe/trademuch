@@ -66,9 +66,9 @@
 						</span>
 					</div>
 					<div ng-switch-default class="text-right">
-						<span class="label label-success">
+						<span class="label label-default">
 							<i class="fa fa-tag"></i>
-							Sell
+							No Stock
 						</span>
 					</div>
 				</div>
