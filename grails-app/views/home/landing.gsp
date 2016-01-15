@@ -402,7 +402,9 @@
 
 <!-- Google Map -->
 <div class="site-wrapper">
-    <div id="map-canvas" class="contact__map"></div>
+    <div ng-app="MapHomeApp" ng-controller="ContentFlowController">
+        <div id="map-canvas" class="contact__map"></div>
+    </div>
 </div> <!-- / .site-wrapper -->
 
 <!-- FOOTER
@@ -456,6 +458,17 @@
 
 <!-- JavaScript
     ================================================== -->
+<!--
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places"></script>
+-->
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular-resource.min.js"></script>
+
+<asset:javascript src="service/angular_map_service.js"/>
+<asset:javascript src="service/angular_user_service.js"/>
+<asset:javascript src="service/angular_search_service.js"/>
+<asset:javascript src="service/angular_googlemap_service.js"/>
 
 <!-- JS Global -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
